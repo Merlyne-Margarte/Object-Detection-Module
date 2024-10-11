@@ -16,10 +16,10 @@ pip install ultralytics
 pip install random
 
 __USAGE__
-Launch Visual Studio Code and open the project.
-Launch the Python program. A choice between an image and a video will be presented.
-Specify the location of the picture or video file.
-The application will print the data(number and name of objects detected) in the console and show the identified objects with bounding boxes containing information about class name and confidence scores.
+1.Launch Visual Studio Code and open the project.
+2.Launch the Python program. A choice between an image and a video will be presented.
+3.Specify the location of the picture or video file.
+4.The application will print the data(number and name of objects detected) in the console and show the identified objects with bounding boxes containing information about class name and confidence scores.
 
 __EXAMPLE OUTPUT IN CONSOLE__
 1. Image Object Detection
