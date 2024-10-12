@@ -36,7 +36,7 @@ if choice==1:
 
             # looping over each bounding box
             for box in result.boxes:
-                # check if confidence is greater than 40 percent
+                # check if confidence is greater than 20 percent
                 if box.conf[0] > 0.2:
                     # get coordinates using xyxy
                     [x1, y1, x2, y2] = box.xyxy[0]
@@ -51,7 +51,7 @@ if choice==1:
                     # get the  bounding box and text colour for the class
                     colour = getColours(cls)
 
-                    # draw the bounding box
+                    # draw the text box
                     cv.rectangle(img, (x1, y1), (x2, y2), colour, 2)
 
                     txt=f'{names[cls]} {box.conf[0]:.2f}'
@@ -116,7 +116,7 @@ else:
                     txt_x = x1
                     txt_y = y1  # Adjust y-coordinate for better positioning
 
-                    # draw bounding box
+                    # draw text box
                     cv.rectangle(frame, (txt_x, txt_y - size[1] - 5), (txt_x + size[0], txt_y), colour, cv.FILLED)
                     # to specify class name and confidence on top of the bounding box
                     cv.putText(frame , txt , (txt_x, txt_y), cv.FONT_HERSHEY_PLAIN, 1.0, (255,255,255), 2)
